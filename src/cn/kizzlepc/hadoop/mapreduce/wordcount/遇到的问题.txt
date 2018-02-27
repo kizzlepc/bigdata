@@ -1,0 +1,26 @@
+1.版本不同，报错：
+Exception in thread "main" java.lang.UnsupportedClassVersionError: cn/kizzlepc/hadoop/mapreduce/wordcount/WordCountMain : Unsupported major.minor version 52.0
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:270)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:205)
+原因：在win10上的eclipsse上使用java1.8，服务器上使用的java1.7
+
+2.报错Exception: org.apache.hadoop.io.nativeio.NativeIO$Windows.access0(Ljava/lang/String;I)Z
+原因：缺少hadoop.dll。hadoop2.7.4的bin文件夹，替换掉之前的，并把hadoop.dll文件放入system32文件夹下
+
+3.报错org.apache.hadoop.security.AccessControlException: Permission denied: user=admin, access=WRITE, inode="/admin":root:supergroup:drwxr-xr-x
+原因：没有权限
+修改需要操作文件的属性
+hadoop fs -mkdir /wordcount/admin
+hadoop fs -chown -R admin:admin /wordcount/admin
