@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/user_hadoop_lib"/>
 	<classpathentry kind="lib" path="D:/python/hadoop-2.7.4/share/hadoop/mapreduce/lib/aopalliance-1.0.jar"/>
@@ -85,5 +84,8 @@
 	<classpathentry kind="lib" path="D:/python/hadoop-2.7.4/share/hadoop/yarn/lib/xz-1.0.jar"/>
 	<classpathentry kind="lib" path="D:/python/hadoop-2.7.4/share/hadoop/yarn/lib/zookeeper-3.4.6.jar"/>
 	<classpathentry kind="lib" path="D:/python/hadoop-2.7.4/share/hadoop/yarn/lib/zookeeper-3.4.6-tests.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/user_python_lib"/>
+	<classpathentry kind="lib" path="E:/work/jar/htmlunit-2.29-OSG.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

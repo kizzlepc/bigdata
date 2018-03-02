@@ -34,8 +34,8 @@ public class HdfsClient {
 	 */
 	@Test
 	public void testAddFileToHdfs() throws Exception {
-		Path src = new Path("D:/xinjiang.zip");
-		Path dst = new Path("/a1/a2");
+		Path src = new Path("E:/english.txt");
+		Path dst = new Path("/wordcount/input/english.txt");
 		fs.copyFromLocalFile(src, dst);
 		fs.close();
 	}
@@ -70,7 +70,7 @@ public class HdfsClient {
 	 */
 	@Test
 	public void testDeleteDir() throws Exception {
-		Path delPath = new Path("/a11");
+		Path delPath = new Path("/wordcount/input");
 		//删除非空文件夹 true
 		fs.delete(delPath, false);
 		fs.close();
