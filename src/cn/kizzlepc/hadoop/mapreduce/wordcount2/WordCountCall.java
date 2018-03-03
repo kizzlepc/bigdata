@@ -16,7 +16,7 @@ public class WordCountCall {
 			//System.exit(2);
 			args = new String[2];
 			args[0] = "hdfs://master:9000/wordcount/input/english.txt";
-			args[1] = "hdfs://master:9000/wordcount/input9";
+			args[1] = "hdfs://master:9000/wordcount/input19";
 		}
 		Configuration conf = new Configuration();
 		
