@@ -1,4 +1,4 @@
-package cn.kizzlepc.hadoop.mapreduce.provinceflow;
+package cn.kizzlepc.hadoop.mapreduce.provinceflow2;
 
 import java.io.DataInput;
 import java.io.DataOutput;
